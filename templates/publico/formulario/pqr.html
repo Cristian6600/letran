@@ -9,7 +9,7 @@
   <form class="cell medium-9 grid-x grid-margin-x" method="POST">{% csrf_token %}
 
     <div class="cell medium-6">
-      <label>Ciudad:</label>
+      <label>Ciudad radicado:</label>
       <div class="input-group">
         
         {{form.ciudad_radi}}
@@ -18,10 +18,10 @@
 
     <div class="cell medium-6">
       <label>Fecha:</label>
-      <div class="input-group">
+      <input id="fecha" type="date">
         
-        {{form.fecha}}
-      </div>
+        
+    
     </div>
 
     <div class="cell medium-6">
@@ -70,14 +70,14 @@
       <label>numero de contacto:</label>
       <div class="input-group">
         
-        {{form.email}}
+        {{form.n_contacto}}
       </div>
     </div>
     <div class="cell medium-6">
       <label>Direccion</label>
       <div class="input-group">
         
-        {{form.email}}
+        {{form.direccion}}
       </div>
     </div>
     <div class="cell medium-6">
@@ -87,11 +87,18 @@
       </div>
     </div>
     <div class="cell medium-6">
+      <label>Ciudad de envio</label>
+      <div class="input-group">
+        {{form.ciudad_env}}
+      </div>
+    </div>
+    
       <label>Descripcion o motivo</label>
       <div class="input-group">
         {{form.desc_pqr}}
       </div>
     </div>
+    
 
     <div class="cell medium-6">
       <button type="submit" class="button" style="width: 200px;">Guardar</button>

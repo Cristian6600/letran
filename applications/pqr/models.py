@@ -5,7 +5,6 @@ from typing import Text
 from django.db import models
 # from applications.cliente.models import Departamento
 
-# Create your models here.
 
 class Pqr(models.Model):
 
@@ -13,12 +12,11 @@ class Pqr(models.Model):
         ('C', 'CC'),
         ('CE', 'CE'),
     )
-    # ciudad_radi = models.ForeignKey(
-    #     Departamento, 
-    #     on_delete=models.CASCADE,
-    #     verbose_name='Ciudad radicado'
-    #     )
-    fecha = models.DateField()
+    ciudad_radi = models.CharField(
+        max_length=80,
+        verbose_name='Ciudad radicado'
+        )
+    fecha = models.DateField(blank=True, null=True)
     # tipo_pqr 
     # tipo_soli
     otro_cual = models.CharField(max_length=30)
@@ -31,11 +29,10 @@ class Pqr(models.Model):
     email = models.EmailField()
     n_contacto = models.CharField(max_length = 10)
     direccion = models.CharField(max_length=120)
-    # ciudad_env = models.ForeignKey(
-    #     Departamento, 
-    #     on_delete=models.CASCADE,
-    #     verbose_name='Ciudad envio'
-    #     )
+    ciudad_env = models.CharField(
+        max_length=80,
+        verbose_name='Ciudad envio'
+        )
     n_guia = models.IntegerField()
     desc_pqr = models.TextField()
 
