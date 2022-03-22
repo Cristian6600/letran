@@ -15,5 +15,11 @@ urlpatterns = [
          name='contacto-letran',
     ),
 
+    path(
+        'consultar-pqr/',
+         views.ConsultarListView.as_view(),
+         name='consultar-pqr',
+    ),
+
     
     ]

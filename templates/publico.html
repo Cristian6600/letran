@@ -59,19 +59,23 @@
                           
                   <article class="grid-container">
                           <div class="grid-x grid-margin-x">
-                              <div class="medium-6 cell small-order-2 medium-order-1">
-                                <h4>Centro de ayuda</h4>
+                              <div class="medium-4 cell small-order-1 medium-order-1">
+                                <h4>Conoce letran</h4>
                                 <li><a href="{% url 'home_app:cumplimiento' %}">Cumplimiento</a></li>
-                                <li><a href="{% url 'pqr_app:pqr' %}">PQR´s</a></li>
                                 <li><a href="{% url 'pqr_app:contacto-letran' %}">Contacto</a></li>
                                 <li><a href="https://www.computrabajo.com.co/empresas/ofertas-de-trabajo-de-firstsource-sas--9034974DB9E805BA">Trabaje con nosotros</a></li>
                               </div>
+                              <div class="medium-4 cell small-order-2 medium-order-2">
+                                <h4>Centro de ayuda</h4>
+                                
+                                <li><a href="{% url 'pqr_app:pqr' %}">PQR´s</a></li>
+                                <li><a href="{% url 'pqr_app:consultar-pqr' %}">Consultar PQR´s</a></li>
+                                
+                              </div>
+                              <div class="medium-4 cell small-order-2 medium-order-2">
+                                <img class="thumbnail" src="{% static 'img/LETRAN NEGRO.PNG' %} " width="250">
+                              </div>
                               
-                              
-                                <div class="medium-6 cell small-order-1 medium-order-2">
-                                  <br>
-                                  <img class="thumbnail" src="{% static 'img/LETRAN NEGRO.PNG' %} " width="250">
-                                </div>
                                 
                           </div>
        
