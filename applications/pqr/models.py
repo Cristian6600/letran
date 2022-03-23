@@ -41,6 +41,7 @@ class Pqr(models.Model):
         )
     n_guia = models.IntegerField()
     desc_pqr = models.TextField()
+    aceptar = models.BooleanField()
 
 class Contacto(models.Model):
     nombre = models.CharField(max_length=40)
@@ -49,3 +50,4 @@ class Contacto(models.Model):
     empresa = models.CharField(max_length=60)
     telefono = models.CharField(max_length=15)
     aceptar = models.BooleanField()
+    
