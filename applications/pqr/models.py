@@ -7,6 +7,12 @@ from django.db import models
 
 
 class Pqr(models.Model):
+    SOLICITUD = (
+        ('PE', 'Petición'),
+        ('QUEJA', 'Queja'),
+        ('INDEM', 'Indemnización'),
+        ('SUG', 'Sugerencia'), 
+    )
 
     TIPOS = (
         ('C', 'Cédula de ciudadanía'),
@@ -24,8 +30,10 @@ class Pqr(models.Model):
         )
     fecha = models.DateField(blank=True, null=True)
     # tipo_pqr 
-    # tipo_soli
-    otro_cual = models.CharField(max_length=30)
+    tipo_soli = models.CharField(
+        max_length=10,
+        choices=SOLICITUD)
+    # otro_cual = models.CharField(max_length=30)
     tipo_do = models.CharField(
         max_length=8,
         choices=TIPOS,)
