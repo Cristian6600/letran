@@ -50,6 +50,9 @@ class Pqr(models.Model):
     n_guia = models.IntegerField()
     desc_pqr = models.TextField()
     aceptar = models.BooleanField()
+    archivo = models.FileField(
+        upload_to='archivos_pqr',
+        blank=True)
 
 class Contacto(models.Model):
     nombre = models.CharField(max_length=40)
