@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include, path, re_path
+from applications.pqr.views import Pqr
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('', include('applications.home.urls')),
     re_path('', include('applications.pqr.urls')),
+    path('polls/', include('applications.pqr.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

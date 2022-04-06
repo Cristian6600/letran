@@ -21,5 +21,12 @@ urlpatterns = [
          name='consultar-pqr',
     ),
 
-    
+    path('prueba', views.index, name='index'),
+
+    path(
+        'prueba-vista/',
+         views.IndexView.as_view(),
+         name='prueba-vista',
+    ),
+
     ]

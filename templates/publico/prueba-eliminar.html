@@ -1,0 +1,10 @@
+<h1>Vista en funcion avanzada</h1>
+{% if latest_question_list %}
+    <ul>
+    {% for pqr in latest_question_list %}
+        <li><a href="/polls/{{ pqr.id }}/">{{ pqr.tipo_do }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>listado no disponible.</p>
+{% endif %}

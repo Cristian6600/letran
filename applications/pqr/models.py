@@ -54,6 +54,9 @@ class Pqr(models.Model):
         upload_to='archivos_pqr',
         blank=True)
 
+    def __str__(self):
+        return str(self.n_guia)
+
 class Contacto(models.Model):
     nombre = models.CharField(max_length=40)
     mail = models.EmailField()
@@ -61,4 +64,7 @@ class Contacto(models.Model):
     empresa = models.CharField(max_length=60)
     telefono = models.CharField(max_length=15)
     aceptar = models.BooleanField()
+
+    def __str__(self):
+        return self.nombre
     
