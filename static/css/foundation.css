@@ -4630,7 +4630,7 @@ select {
   bottom: 0;
   width: 100%;
   margin-bottom: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: rgba(10, 10, 10, 0.5);
   color: #fefefe; }
 
@@ -4641,7 +4641,7 @@ select {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 10;
-  padding: 1rem;
+  padding: 0.3rem;
   color: #fefefe; }
   [data-whatinput='mouse'] .orbit-previous, [data-whatinput='mouse'] .orbit-next {
     outline: 0; }
