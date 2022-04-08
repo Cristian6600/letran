@@ -54,7 +54,7 @@ class RespuestaPdf(DetailView):
         
         nombre = self.kwargs['full_name']
                
-        respuesta = Respuesta.objects.get(id__tipo_do = nombre)[:1]
+        respuesta = Respuesta.objects.get(id__tipo_do = nombre)[:0]
         data = {
             'respuesta': respuesta,
                                     

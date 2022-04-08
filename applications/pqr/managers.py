@@ -6,7 +6,7 @@ from django.db.models import Q, F
 
 class BdManager(models.Manager):
     def buscar_bd(self, kword, order):
-        consulta = self.filter(id__icontains = kword)
+        consulta = self.filter(n_documento = kword)
         #     Q(n_documento__icontains=kword) | Q(id__icontains=kword)
         # )
 
