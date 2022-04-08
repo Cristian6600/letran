@@ -5,9 +5,10 @@ from re import template
 from django.shortcuts import render
 from django.views.generic import CreateView, ListView, DetailView
 from django.views import generic
-from . models import Pqr, Contacto
+from . models import Pqr, Contacto, Respuesta
 from .forms import PqrForm
 from django.http import HttpResponse
+from .utils import render_to_pdf
 
 class PqrCreateView(CreateView):
 
@@ -27,7 +28,11 @@ class ConsultarListView(ListView):
     context_object_name = 'list'
 
     def get_queryset(self):
-        return Pqr.objects.all()
+        # return Pqr.objects.all()[:1]
+        kword = self.request.GET.get("kword", '')
+        order = self.request.GET.get("order", '')
+        queryset = Pqr.objects.buscar_bd(kword, order)[:1]
+        return queryset
 
 def index(request):
     latest_question_list = Pqr.objects.all()
@@ -42,6 +47,20 @@ class IndexView(generic.DetailView):
     model = Pqr
     template_name = 'publico/prueba-eliminar.html'
     context_object_name = 'latest_question_list'
+
+class RespuestaPdf(DetailView):
+    
+    def get(self, request, *args, **kwargs):
+        
+        nombre = self.kwargs['full_name']
+               
+        respuesta = Respuesta.objects.get(id__tipo_do = nombre)[:1]
+        data = {
+            'respuesta': respuesta,
+                                    
+        }
+        pdf = render_to_pdf('publico/formulario/pdf_respuestas.html', data)
+        return HttpResponse(pdf, content_type='application/pdf')
 
     
 

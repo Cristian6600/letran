@@ -29,4 +29,10 @@ urlpatterns = [
          name='prueba-vista',
     ),
 
+    path(
+        'respuesta-pdf/<full_name>/',
+        views.RespuestaPdf.as_view(),
+        name = 'respuesta-pdf',
+    ),
+
     ]

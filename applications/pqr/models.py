@@ -1,8 +1,11 @@
 from distutils.text_file import TextFile
 import email
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 from pyexpat import model
 from typing import Text
 from django.db import models
+from .managers import BdManager
 # from applications.cliente.models import Departamento
 
 
@@ -54,6 +57,8 @@ class Pqr(models.Model):
         upload_to='archivos_pqr',
         blank=True)
 
+    objects = BdManager()
+
     def __str__(self):
         return str(self.n_guia)
 
@@ -68,3 +73,29 @@ class Contacto(models.Model):
     def __str__(self):
         return self.nombre
     
+class Respuesta(models.Model):
+
+    Tipo = (
+        ('A', 'Abierto'),
+        ('P', 'Pendiente'),
+        ('C', 'Cerrado'),
+    )
+
+    id = models.OneToOneField(
+        Pqr, primary_key=True,
+        on_delete=models.CASCADE,
+        verbose_name= 'numero_pqr', 
+        related_name= 'pqr_respuesta'
+        )
+
+    tipo = models.CharField(max_length=2, choices=Tipo, default='A')
+
+    respuesta = models.TextField(max_length=7500)
+
+    fecha = models.DateTimeField(auto_now_add=True, blank=True, null=True,)
+
+@receiver(post_save, sender=Pqr)
+def create_user_profile(sender, instance, created, **kwargs):
+    
+    if created:
+        Respuesta.objects.create(id=instance)
