@@ -28,11 +28,12 @@ class ConsultarListView(ListView):
     context_object_name = 'list'
 
     def get_queryset(self):
-        # return Pqr.objects.all()[:1]
-        kword = self.request.GET.get("kword", '')
-        order = self.request.GET.get("order", '')
-        queryset = Pqr.objects.buscar_bd(kword, order)[:1]
-        return queryset
+        print('*******')
+        palabra_clave = self.request.GET.get("kword")
+        lista = Pqr.objects.filter(
+            id = palabra_clave
+        )
+        return lista
 
 def index(request):
     latest_question_list = Pqr.objects.all()
@@ -54,7 +55,7 @@ class RespuestaPdf(DetailView):
         
         nombre = self.kwargs['full_name']
                
-        respuesta = Respuesta.objects.get(id__tipo_do = nombre)[:0]
+        respuesta = Respuesta.objects.get(id = nombre)
         data = {
             'respuesta': respuesta,
                                     
