@@ -50,7 +50,7 @@
     <td>{{ e.n_documento }}</td>
     <td>{{e.ciudad_radi}}</td>
     <td>{{e.tipo_soli}}</td>
-    <td></td>
+    <td>{{e.pqr_respuesta.tipo}}</td>
     <td>
       <a href="{% url 'pqr_app:respuesta-pdf' e.id %}" class="button"><i class="fi-results"></i></a>
     </td>

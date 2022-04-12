@@ -76,9 +76,9 @@ class Contacto(models.Model):
 class Respuesta(models.Model):
 
     Tipo = (
-        ('A', 'Abierto'),
-        ('P', 'Pendiente'),
-        ('C', 'Cerrado'),
+        ('Abierto', 'Abierto'),
+        ('Pendiente', 'Pendiente'),
+        ('Cerrado', 'Cerrado'),
     )
 
     id = models.OneToOneField(
@@ -88,7 +88,7 @@ class Respuesta(models.Model):
         related_name= 'pqr_respuesta'
         )
 
-    tipo = models.CharField(max_length=2, choices=Tipo, default='A')
+    tipo = models.CharField(max_length=9, choices=Tipo, default='Abierto')
 
     respuesta = models.TextField(max_length=7500)
 
