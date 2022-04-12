@@ -12,53 +12,62 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 </head>
+<!-- <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+  <div class="title-bar-title">Menu</div> -->
 
-  <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-    <div class="title-bar-title">Menu</div>
-  </div>
+
+<div data-sticky-container>
   
-  <div class="top-bar" id="responsive-menu">
-    <a href="{% url 'home_app:publico' %}"> <img src="{% static 'img/colores letran +.png' %}"  alt="10" width="145"> </a>
-      <div class="top-bar-right">
-        <ul class="dropdown menu" data-dropdown-menu>
+  
+    <div class="top-bar" class="top-bar" data-sticky data-margin-top="0" id="example-menu">
+      
+      <a href="{% url 'home_app:publico' %}"> <img src="{% static 'img/colores letran +.png' %}"  alt="10" width="145"> </a>
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu>
+
+            <li class="has-submenu">
+              <a href="{% url 'home_app:quienes-somos' %}"><strong>Nuestra empresa</strong> </a>
+            </li>
+        
+            <li class="has-submenu">
+              <a href="#0"><strong>Servicios</strong> </a>
+                <ul class="submenu menu vertical" data-submenu>
+                  <li><a href="{% url 'home_app:mensajeria-documentos' %}">Mensajeria expresa</a></li>
+                  <li><a href="{% url 'home_app:paqueteo' %}">Cargue paqueteo</a></li>
+                  <li><a href="{% url 'home_app:servicios-adicionales' %}">Servicios adicionales</a></li>
+                  <li><a href="{% static 'img/Tarifarios.pdf' %}">Tarifas</a></li>
+                </ul>      
+            </li>
+            <li class="has-submenu">
+              <a href="https://express.firstsource.net.co/"><strong>Cotizar</strong> </a>
+            </li>
+        
+        
+        
+            <li class="has-submenu">
+              <a href="{% url 'home_app:sedes' %}"><strong>Sedes</strong> </a>
+            </li>
 
           <li class="has-submenu">
-            <a href="{% url 'home_app:quienes-somos' %}"><strong>Nuestra empresa</strong> </a>
-          </li>
-        
-          <li class="has-submenu">
-            <a href="#0"><strong>Servicios</strong> </a>
+            <a href="#0"><strong>Ingresar</strong> </a>
               <ul class="submenu menu vertical" data-submenu>
-                <li><a href="{% url 'home_app:mensajeria-documentos' %}">Mensajeria expresa</a></li>
-                <li><a href="{% url 'home_app:paqueteo' %}">Cargue paqueteo</a></li>
-                <li><a href="{% url 'home_app:servicios-adicionales' %}">Servicios adicionales</a></li>
-                <li><a href="{% static 'img/Tarifarios.pdf' %}">Tarifas</a></li>
-            </ul>      
-        </li>
-        <li class="has-submenu">
-          <a href="https://express.firstsource.net.co/"><strong>Cotizar</strong> </a>
-        </li>
-        
-        
-        
-        <li class="has-submenu">
-          <a href="{% url 'home_app:sedes' %}"><strong>Sedes</strong> </a>
-        </li>
-
-        <li class="has-submenu">
-          <a href="#0"><strong>Ingresar</strong> </a>
-          <ul class="submenu menu vertical" data-submenu>
-            <li><a href="https://firstsource.appsiscore.com/app/app-cliente/">Express y paqueteo</a></li>
-            <li><a href="https://190.24.11.51/openc3/">Financiero</a></li>
-          </ul>
-        </li>
-        <li class="menu-button" role="none">
-          <div class="reveal" id="exampleModal1" data-reveal>
-          <p class="text-center"><iframe src="https://express.firstsource.net.co/tk1/" width="500"></iframe></p>
+                <li><a href="https://firstsource.appsiscore.com/app/app-cliente/">Express y paqueteo</a></li>
+                <li><a href="https://190.24.11.51/openc3/">Financiero</a></li>
+              </ul>
+          </li>
+          <li class="menu-button" role="none">
+            <div class="reveal" id="exampleModal1" data-reveal>
+            <p class="text-center"><iframe src="https://express.firstsource.net.co/tk1/" width="500"></iframe></p>
+          </li>
         </div>
-      </div>
+
+    </div>
   </div>
+</div>
+
+
+
  
                         {% block publico-content %}
                         {% endblock publico-content %}

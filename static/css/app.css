@@ -68,4 +68,10 @@
   transform: translate(-50%, -50%);
 }
 
+.ex1 {
+  margin: auto;
+  background: gold;
+  width: 66%;
+}
+
 

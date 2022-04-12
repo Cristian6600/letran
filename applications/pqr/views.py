@@ -9,6 +9,7 @@ from . models import Pqr, Contacto, Respuesta
 from .forms import PqrForm
 from django.http import HttpResponse
 from .utils import render_to_pdf
+from django.db.models import Q
 
 class PqrCreateView(CreateView):
 
@@ -30,8 +31,7 @@ class ConsultarListView(ListView):
     def get_queryset(self):
         print('*******')
         palabra_clave = self.request.GET.get("kword")
-        lista = Pqr.objects.filter(
-            id = palabra_clave
+        lista = Pqr.objects.filter(Q(id = palabra_clave)| Q(n_documento = palabra_clave)
         )
         return lista
 
