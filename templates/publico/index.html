@@ -3,132 +3,117 @@
 {% load static %}
 
 {% block publico-content %}
-<head>
-  <title>Hola</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-</head>
-
 <div class="news-image-gallery-container">
   <div class="row">
     <div class="small-12 medium-12 large-8 columns">
       <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
         <ul class="orbit-container">
-          <!-- <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-          <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button> -->
-
           <li class="orbit-slide">
-            
-            <img class="orbit-image" src="{% static 'img/LISTOS PARA ENTREGAR.gif' %}" alt="Space">
-            <figcaption class="orbit-caption">
-              <!-- <center><a  href="https://express.firstsource.net.co/" >Obtenga una cotización </a></center> -->
-            <!-- <center>  <button class="submit success button">Save</button></center> -->
-            <div class="menu align-center" >
-              
-              <a class="button" type="button" data-tooltip tabindex="1" title="Calcula el costo." data-position="top" href="https://express.firstsource.net.co/">Obtenga una cotización</a>
-              
-            </div>
+            <div class="contenedor">
+              <img class="orbit-image" src="{% static 'img/BANNER 6.png' %}" alt="Space">
 
+                <div class="centrado">
+                  
+                  <form id="form" name="form" method="get" target="_BLANK" action="https://firstsource.appsiscore.com/app/app-cliente/cons_publica.php?">
+                    
+                  <div class="input-group">
+                    
+                    
+                        <input type="text" class="input-group-field" name="GUIA" id="GUIA" placeholder="Ingresar numero guia..." value="" required="">
+                        <div class="input-group-button">
+
+                          <button type="submit" class="button" width="500">🔍 </button> 
+                        </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+            <figcaption class="orbit-caption">
+            <div class="menu align-center" >
+              <a class="button" type="button" data-tooltip tabindex="1" title="Calcula el costo." data-position="top" href="https://express.firstsource.net.co/">Obtenga una cotización</a>
+            </div>
           </li>
         </ul>
-        <!-- <nav class="orbit-bullets">
-          <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
-          <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-          
-        </nav> -->
-      </div>
-    
+    </div>
   </div>
 </div>
 
-<ul class="accordion" data-accordion data-allow-all-closed="true"> 
-  
-   <li class="accordion-item" data-accordion-item>
-    <a href="#deeplink2" class="accordion-title"  ><center> <H5>  CONSULTAR GUIA</H5> </center></a>
-    <div class="accordion-content" data-tab-content id="deeplink2">
-      <p class="text-center"><iframe src="https://express.firstsource.net.co/tk1/" width="500"></iframe></p>
-    </div>
-  </li> 
-  
-</ul>
 
-
-  <article class="grid-container">
-    <div class="grid-x grid-margin-x">
-      <div class="medium-7 large-6 cell">
-      </div>
+<article class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="medium-7 large-6 cell">
     </div>
+  </div>
+
+<div class="">
+  <hr>
+</div>
+
+<div class="menu align-center">
+  <h4 >Conoce nuestros servicios de envío</h4>
+</div>
+
+<div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
   
-  <div class="">
-    <hr>
+  <div class="cell">
+    <div class="callout">
+      <p><img src="{% static 'img/expresa.png' %}" alt="image of a planet called Pegasi B"></p>
+      <p class="lead">Mensajería expresa</p>
+      <p class="subheader">Movilización de envíos cuyo peso real o volumérico sea igual o inferior a 5 kg con covertura a nivel nacional.</p>
+      <a href="{% url 'home_app:mensajeria-documentos' %}" class="button small expanded hollow">Ver más</a>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="callout">
+      <p><img src="{% static 'img/paqueteo 1.png' %}" alt="image of a planet called Pegasi B"></p>
+      <p class="lead">Cargue paqueteo</p>
+      <p class="subheader">Envíos de paquetes y cajas, servicos dedicados y aéreos a nivel nacional cuyo peso real o vulumétrico puede ser mayor a 30 kg.</p>
+      <a href="{% url 'home_app:paqueteo' %}" class="button small expanded hollow">Ver más</a>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="callout">
+      <p><img src="{% static 'img/moto.jpg' %}" alt="image of a planet called Pegasi B"></p>
+      <p class="lead">Servicios adicionales</p>
+      <p class="subheader">Personal capacitado y eficiente para gestionar los procesos administrativos - logísticos de las empresas a nivel nacional.</p>
+      <a href="{% url 'home_app:servicios-adicionales' %}" class="button small expanded hollow">Ver más</a>
+    </div>
   </div>
   
-  <div class="menu align-center">
-    <h4 >Conoce nuestros servicios de envío</h4>
-  </div>
-  
-  <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
-    
-    <div class="cell">
-      <div class="callout">
-        <p><img src="{% static 'img/expresa.png' %}" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Mensajería expresa</p>
-        <p class="subheader">Movilización de envíos cuyo peso real o volumérico sea igual o inferior a 5 kg con covertura a nivel nacional.</p>
-        <a href="{% url 'home_app:mensajeria-documentos' %}" class="button small expanded hollow">Ver más</a>
-      </div>
-    </div>
-    <div class="cell">
-      <div class="callout">
-        <p><img src="{% static 'img/paqueteo 1.png' %}" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Cargue paqueteo</p>
-        <p class="subheader">Envíos de paquetes y cajas, servicos dedicados y aéreos a nivel nacional cuyo peso real o vulumétrico puede ser mayor a 30 kg.</p>
-        <a href="{% url 'home_app:paqueteo' %}" class="button small expanded hollow">Ver más</a>
-      </div>
-    </div>
-    <div class="cell">
-      <div class="callout">
-        <p><img src="{% static 'img/moto.jpg' %}" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Servicios adicionales</p>
-        <p class="subheader">Personal capacitado y eficiente para gestionar los procesos administrativos - logísticos de las empresas a nivel nacional.</p>
-        <a href="{% url 'home_app:servicios-adicionales' %}" class="button small expanded hollow">Ver más</a>
-      </div>
-    </div>
-    
 
-  </div>
-  
-  </article>
+</div>
 
-  <article class="grid-container">
-    
-    <div class="grid-x grid-margin-x">
-      <div class="medium-6 cell small-order-2 medium-order-1">
-        
-        <p ><strong> ¿Quiénes somos? </strong></p>
-        <p class="subheader">Somos un operador logístico integral, con amplia experiencia y reconocimiento en servicios de mensajería expresa, mensajería masiva paqueteo, E-commerce, carga masiva y semi masiva.</p>
-        <p class="subheader">Nuestro objetivo principal es la satisfacción de nuestros clientes a través de soluciones innovadoras, que permitan prestar un servicio de excelente calidad.</p>
-        <p class="subheader">FIRSTSOURCE S.A.S es un operador logístico a nivel nacional que tiene dentro de sus líneas de negocio la Mensajería Expresa, Paqueteo y Carga, Call y Contact 
-          Center y E-commerce con alta experiencia y reconocimiento en la prestación de servicios integrales; <br>
-          su propósito es la satisfacción de sus clientes a través de soluciones innovadoras y analíticas que permitan prestar un servicio de alta calidad, adaptabilidad y eficiencia. <a href="{% url 'home_app:quienes-somos' %}" ><FONT COLOR="navy">Ver mas... </FONT></a> 
-     
-          
-        </p>
-     
+</article>
+
+<article class="grid-container">
+  
+  <div class="grid-x grid-margin-x">
+    <div class="medium-6 cell small-order-2 medium-order-1">
       
-      </div>
-      <div class="medium-6 cell small-order-1 medium-order-2">
-        <img class="thumbnail" src="{% static 'img/DSC_0306.JPG' %}">
-      </div>
+      <p ><strong> ¿Quiénes somos? </strong></p>
+      <p class="subheader">Somos un operador logístico integral, con amplia experiencia y reconocimiento en servicios de mensajería expresa, mensajería masiva paqueteo, E-commerce, carga masiva y semi masiva.</p>
+      <p class="subheader">Nuestro objetivo principal es la satisfacción de nuestros clientes a través de soluciones innovadoras, que permitan prestar un servicio de excelente calidad.</p>
+      <p class="subheader">FIRSTSOURCE S.A.S es un operador logístico a nivel nacional que tiene dentro de sus líneas de negocio la Mensajería Expresa, Paqueteo y Carga, Call y Contact 
+        Center y E-commerce con alta experiencia y reconocimiento en la prestación de servicios integrales; <br>
+        su propósito es la satisfacción de sus clientes a través de soluciones innovadoras y analíticas que permitan prestar un servicio de alta calidad, adaptabilidad y eficiencia. <a href="{% url 'home_app:quienes-somos' %}" ><FONT COLOR="navy">Ver mas... </FONT></a> 
+   
+        
+      </p>
+   
+    
     </div>
-    
-    
-
-  </article>
+    <div class="medium-6 cell small-order-1 medium-order-2">
+      <img class="thumbnail" src="{% static 'img/DSC_0306.JPG' %}">
+    </div>
+  </div>
   
-	
-	
+  
+
+</article>
+
+
+
 
 </div>
-  
-  {% endblock publico-content %}
+
+{% endblock publico-content %}
