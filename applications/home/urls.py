@@ -70,4 +70,5 @@ urlpatterns = [
         views.Cumplimiento.as_view(),
         name='cumplimiento',
     ),
+    
 ]

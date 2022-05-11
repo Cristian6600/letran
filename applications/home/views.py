@@ -1,9 +1,14 @@
 from re import template
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from . models import Noticia
 
-class probando(TemplateView):
+class probando(ListView):
     template_name = "publico/index.html"
+
+    def get_queryset(self):
+        queryset = Noticia.objects.all()
+        return queryset
 
 #-----------Servicios---------------------------------
 class mesa_docu(TemplateView):
@@ -40,3 +45,10 @@ class Politica_SGC(TemplateView):
 
 class Cumplimiento(TemplateView):
     template_name = "publico/requerimientos/cumplimiento.html"
+
+#---------------Noticias------------------------------
+# class NoticiaDetailView(DetailView):
+#     model: Noticia
+#     template_name = "publico/index.html"
+
+   

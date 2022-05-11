@@ -3,34 +3,50 @@
 {% load static %}
 
 {% block publico-content %}
-<div class="news-image-gallery-container">
-  <div class="row">
-    <div class="small-12 medium-12 large-8 columns">
-      <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
-        <ul class="orbit-container">
-          <li class="orbit-slide">
-            <div class="contenedor">
-              <img class="orbit-image" src="{% static 'img/BANNER 6.png' %}" alt="Space">
-                <div class="centrado">
-                  <form id="form" name="form" method="get" target="_BLANK" action="https://firstsource.appsiscore.com/app/app-cliente/cons_publica.php?"> 
-                    <div class="input-group input-group-rounded">
-                        <input type="search" class="input-group-field" name="GUIA" id="GUIA" placeholder="Ingresar guia..." value="" required="">
-                        <div class="input-group-button">
-                          <button type="submit" class="button" width="500">🔍 </button> 
-                        </div>
-                    </div>
-                  </form>
-                </div>
-            </div>
-            <figcaption class="orbit-caption">
-            <div class="menu align-center" >
-              <a class="button" type="button" data-tooltip tabindex="1" title="Calcula el costo." data-position="top" href="https://express.firstsource.net.co/">Obtenga una cotización</a>
-            </div>
-          </li>
-        </ul>
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+  <div class="orbit-wrapper">
+    <div class="orbit-controls">
+      <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+      <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
     </div>
+    <ul class="orbit-container">
+      <li class="is-active orbit-slide">
+        <figure class="orbit-figure">
+          <img class="orbit-image" src="{% static 'img/BANNER 6.png' %}" alt="Space">
+          <div class="centrado">
+            <form id="form" name="form" method="get" target="_BLANK" action="https://firstsource.appsiscore.com/app/app-cliente/cons_publica.php?"> 
+              <div class="input-group input-group-rounded">
+                  <input type="search" class="input-group-field" name="GUIA" id="GUIA" placeholder="Ingresar guia..." value="" required="">
+                  <div class="input-group-button">
+                    <button type="submit" class="button" width="500">🔍 </button> 
+                  </div>
+              </div>
+            </form>
+          </div>
+          <figcaption class="orbit-caption"><div class="menu align-center" >
+              <a class="button" type="button" data-tooltip tabindex="1" title="Calcula el costo." data-position="top" href="https://express.firstsource.net.co/">Obtenga una cotización</a>
+            </div></figcaption>
+        </figure>
+      </li>
+      <li class="orbit-slide">
+        <figure class="orbit-figure">
+          <img class="orbit-image" src="{% static 'img/BANNER_P_4.png' %}" alt="Space">
+          <figcaption class="orbit-caption"><div class="menu align-center" >
+            <a class="button" type="button" data-tooltip tabindex="1" title="Calcula el costo." data-position="top" href="https://express.firstsource.net.co/">Obtenga una cotización</a></figcaption>
+        </figure>
+      </li>
+      
+    </ul>
   </div>
+  <nav class="orbit-bullets">
+    <button class="is-active" data-slide="0">
+      <span class="show-for-sr">First slide details.</span>
+      <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+    </button>
+    <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+  </nav>
 </div>
+
 
 
 <article class="grid-container">
@@ -76,12 +92,10 @@
   <div class="grid-x grid-margin-x">
     <div class="medium-6 cell small-order-2 medium-order-1">
       <p ><strong> ¿Quiénes somos? </strong></p>
-      <p class="subheader">Somos un operador logístico integral, con amplia experiencia y reconocimiento en servicios de mensajería expresa, mensajería masiva paqueteo, E-commerce, carga masiva y semi masiva.</p>
-      <p class="subheader">Nuestro objetivo principal es la satisfacción de nuestros clientes a través de soluciones innovadoras, que permitan prestar un servicio de excelente calidad.</p>
-      <p class="subheader">FIRSTSOURCE S.A.S es un operador logístico a nivel nacional que tiene dentro de sus líneas de negocio la Mensajería Expresa, Paqueteo y Carga, Call y Contact 
-        Center y E-commerce con alta experiencia y reconocimiento en la prestación de servicios integrales; <br>
-        su propósito es la satisfacción de sus clientes a través de soluciones innovadoras y analíticas que permitan prestar un servicio de alta calidad, adaptabilidad y eficiencia. <a href="{% url 'home_app:quienes-somos' %}" ><FONT COLOR="navy">Ver mas... </FONT></a>  
+      {% for e in object_list %}
+      <p class="subheader"> {{ e.articulo }} </p> <a href="{% url 'home_app:quienes-somos' %}" ><FONT COLOR="navy">Ver mas... </FONT></a>  
       </p>
+      {% endfor %}
     </div>
     <div class="medium-6 cell small-order-1 medium-order-2">
       <img  src="{% static 'img/DSC_0306.JPG' %}">
