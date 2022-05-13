@@ -292,6 +292,7 @@
 }
 
 
+
 .image-hover-wrapper {
   position: relative;
 }
@@ -313,11 +314,11 @@
 
 .image-hover-wrapper a .image-hover-wrapper-reveal {
   background-color: rgba(0, 0, 0, 0.5);
-  color: #b84e4e;
+  color: #fefefe;
   display: inline;
   height: 100%;
   margin-left: -100%;
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   width: 100%;
   z-index: 80;
@@ -360,10 +361,55 @@
   left: 0;
   padding: 0.5rem;
   position: absolute;
-  top: 78%;
+  top: 0%;
   width: 75%;
-  z-index: 20;
+  z-index: 10;
 }
+
+
+.marketing-site-hero {
+  background: url("https://images.pexels.com/photos/8264/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb") top right no-repeat;
+  height: 65vh;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 40em) {
+  .marketing-site-hero {
+    background-position: center center;
+  }
+}
+
+.marketing-site-hero-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.marketing-site-hero-content h1 {
+  font-size: 32px;
+}
+
+.marketing-site-hero-content .button.round {
+  border-radius: 5000px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .marketing-site-hero-content {
+    padding-left: 50%;
+  }
+}
+
+
 
 
 
