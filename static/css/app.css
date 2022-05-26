@@ -64,9 +64,11 @@
 .centrado{
   position: absolute;
   top: 43%;
-  left: 50%;
+  left: 80%;
   width: 45%;
   transform: translate(-50%, -50%);
+  font-family: 'Arial Nova Light', sans-serif  ;
+  color: #fefefe;
 }
 
 .ex1 {
@@ -409,7 +411,93 @@
   }
 }
 
+@font-face {
+  font-family: 'Arial Nova';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial Nova'), url('https://fonts.cdnfonts.com/s/14414/ArialNova.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Arial Nova'), url('https://fonts.cdnfonts.com/s/14414/ArialNova-Italic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arial Nova'), url('https://fonts.cdnfonts.com/s/14414/ArialNova-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Arial Nova'), url('https://fonts.cdnfonts.com/s/14414/ArialNova-BoldItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova Cond';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial Nova Cond'), url('https://fonts.cdnfonts.com/s/14414/ArialNovaCond.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova Cond';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Arial Nova Cond'), url('https://fonts.cdnfonts.com/s/14414/ArialNovaCond-Italic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Arial Nova Light'), url('https://fonts.cdnfonts.com/s/14414/ArialNova-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova Cond Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Arial Nova Cond Light'), url('https://fonts.cdnfonts.com/s/14414/ArialNovaCond-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova Light';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Arial Nova Light'), url('https://fonts.cdnfonts.com/s/14414/ArialNova-LightItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova Cond Light';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Arial Nova Cond Light'), url('https://fonts.cdnfonts.com/s/14414/ArialNovaCond-LightItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova Cond';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arial Nova Cond'), url('https://fonts.cdnfonts.com/s/14414/ArialNovaCond-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Arial Nova Cond';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Arial Nova Cond'), url('https://fonts.cdnfonts.com/s/14414/ArialNovaCond-BoldItalic.woff') format('woff');
+}
 
+
+.letra {
+  font-family: 'Arial Nova Light', sans-serif;
+}
+
+@import url('http://fonts.cdnfonts.com/css/arial-rounded-mt-bold');
+.titulo {
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+.letra-banner {
+  font-family: 'Arial Nova Light', sans-serif  ;
+  color: #fefefe;
+}
 
 
 

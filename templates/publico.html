@@ -4,59 +4,57 @@
 
 {% block content %}
 
-  <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-    <button class="menu-icon" type="button" data-toggle></button>
-    <div class="title-bar-title">Menu</div>
-  </div>
-  
-    <div class="top-bar" class="top-bar"  id="example-menu">
-      <a href="{% url 'home_app:publico' %}"> <img src="{% static 'img/colores letran +.png' %}"  alt="10" width="145"> </a>
-      
-        <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu>
-            
-            <li class="has-submenu">
-            <a class="hollow button" type="button" data-toggle="example-dropdown"><strong>Rastrear</strong> </a>
-<div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
-  Rastree su producto.
-  <form id="form" name="form" method="get" target="_BLANK" action="https://firstsource.appsiscore.com/app/app-cliente/cons_publica.php?"> 
-    <div class="input-group input-group-rounded">
-        <input type="search" class="input-group-field" name="GUIA" id="GUIA" placeholder="Ingresar guia..." value="" required="">
-        <div class="input-group-button">
-          <button type="submit" class="button" width="500">🔍 </button> 
-        </div>
-    </div>
-  </form>
+<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
 </div>
-</li>
-            <li class="has-submenu">
-              <a href="{% url 'home_app:quienes-somos' %}"><strong>Nuestra empresa</strong> </a>
-            </li>
-            <li class="has-submenu">
-              <a href="#0"><strong>Servicios</strong> </a>
-                <ul class="submenu menu vertical" data-submenu>
-                  <li><a href="{% url 'home_app:mensajeria-documentos' %}">Mensajeria expresa</a></li>
-                  <li><a href="{% url 'home_app:paqueteo' %}">Cargue paqueteo</a></li>
-                  <li><a href="{% url 'home_app:servicios-adicionales' %}">Servicios adicionales</a></li>
-                  <li><a href="{% static 'img/Tarifarios.pdf' %}">Tarifas</a></li>
-                </ul>      
-            </li>
-            <li class="has-submenu">
-              <a href="https://express.firstsource.net.co/"><strong>Cotizar</strong> </a>
-            </li>
-            <li class="has-submenu">
-              <a href="{% url 'home_app:sedes' %}"><strong>Sedes</strong> </a>
-            </li>
-            <li class="has-submenu">
-              <a href="#0"><strong>Portal clientes</strong> </a>
-              <ul class="submenu menu vertical" data-submenu>
-                <li><a href="https://firstsource.appsiscore.com/app/app-cliente/">Express y paqueteo</a></li>
-                <li><a href="https://190.24.11.51/openc3/">Financiero</a></li>
-              </ul>
-            </li>  
-          </ul>
+  
+<div class="top-bar" class="top-bar"  id="example-menu">
+  <a href="{% url 'home_app:publico' %}"> <img src="{% static 'img/colores letran +.png' %}"  alt="10" width="145"> </a>    
+  <div class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>        
+      <li class="has-submenu">
+        <a class="button warning" type="button" data-toggle="example-dropdown"><strong>Rastrear</strong> </a>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">Rastree su producto.
+          <form id="form" name="form" method="get" target="_BLANK" action="https://firstsource.appsiscore.com/app/app-cliente/cons_publica.php?"> 
+            <div class="input-group input-group-rounded">
+              <input type="search" class="input-group-field" name="GUIA" id="GUIA" placeholder="Ingresar guia..." value="" required="">
+                <div class="input-group-button">
+                  <button type="submit" class="button" width="500">🔍 </button> 
+                </div>
+            </div>
+          </form>
         </div>
-    </div>
+      </li>
+        <li class="has-submenu">
+          <a href="{% url 'home_app:quienes-somos' %}"><strong>Nuestra empresa</strong> </a>
+        </li>
+        <li class="has-submenu">
+          <a href="#0"><strong>Servicios</strong> </a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="{% url 'home_app:mensajeria-documentos' %}">Mensajeria expresa</a></li>
+              <li><a href="{% url 'home_app:paqueteo' %}">Cargue paqueteo</a></li>
+              <li><a href="{% url 'home_app:servicios-adicionales' %}">Servicios adicionales</a></li>
+              <li><a href="{% static 'img/Tarifarios.pdf' %}">Tarifas</a></li>
+            </ul>      
+        </li>
+        <li class="has-submenu">
+          <a href="https://express.firstsource.net.co/"><strong>Cotizar</strong> </a>
+        </li>
+        
+        <li class="has-submenu">
+          <a href="{% url 'home_app:sedes' %}"><strong>Sedes</strong> </a>
+        </li>
+          <li class="has-submenu">
+            <a href="#0"><strong>Portal clientes</strong> </a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="https://firstsource.appsiscore.com/app/app-cliente/">Express y paqueteo</a></li>
+              <li><a href="https://190.24.11.51/openc3/">Financiero</a></li>
+            </ul>
+          </li>  
+    </ul>
+  </div>
+</div>
 
 {% block publico-content %}
 {% endblock publico-content %}
@@ -66,14 +64,14 @@
     <div class="grid-x grid-margin-x">
       <div class="medium-4 cell small-order-1 medium-order-1">
         <h5>Conoce letran</h5>
-          <li><a href="{% url 'home_app:cumplimiento' %}">Cumplimiento</a></li>
-          <li><a href="{% url 'pqr_app:contacto-letran' %}">Contacto</a></li>
-          <li><a href="https://www.computrabajo.com.co/empresas/ofertas-de-trabajo-de-firstsource-sas--9034974DB9E805BA">Trabaje con nosotros</a></li>
+          <li class="letra"><a href="{% url 'home_app:cumplimiento' %}">Cumplimiento</a></li>
+          <li class="letra"><a href="{% url 'pqr_app:contacto-letran' %}">Contacto</a></li>
+          <li class="letra"><a href="https://www.computrabajo.com.co/empresas/ofertas-de-trabajo-de-firstsource-sas--9034974DB9E805BA">Trabaje con nosotros</a></li>
       </div>
       <div class="medium-4 cell small-order-2 medium-order-2">
         <h5>Centro de ayuda</h5>   
-          <li><a href="{% url 'pqr_app:pqr' %}">PQR´s</a></li>
-          <li><a href="{% url 'pqr_app:consultar-pqr' %}">Consultar PQR´s</a></li>                          
+          <li class="letra"><a href="{% url 'pqr_app:pqr' %}">PQR´s</a></li>
+          <li class="letra"><a href="{% url 'pqr_app:consultar-pqr' %}">Consultar PQR´s</a></li>                          
       </div>
       <div class="medium-4 cell small-order-2 medium-order-2">
         <img class="thumbnail" src="{% static 'img/LETRAN NEGRO.PNG' %} " width="250">
@@ -81,13 +79,14 @@
                            
     </div>   
   </article>
+  <br>
   <a href="https://wa.me/573022456704?text=Me%20gustaría%20saber%20el%20precio%20del%20coche" class="whatsapp" target="_blank"><i class="fa fa-whatsapp whatsapp-icon">¿Como puedo ayudarte?</i></a>
     <div class="marketing-site-footer-bottom">
       <div class="row large-unstack align-middle">
-        <p class="text-center">© Letran, 2022.</p>
+        <p class="text-center">&copy; 2022 Firstsource.</p>
           <ul  class="menu align-center">
-            <li ><a href="{% url 'home_app:politica-t-datos' %}">Politica de privacidad</a></li>
-            <li><a href="{% url 'home_app:terminos-condiciones' %}">Terminos y condiciones</a></li>
+            <li class="letra"><a href="{% url 'home_app:politica-t-datos' %}">Politica de privacidad</a></li>
+            <li class="letra"><a href="{% url 'home_app:terminos-condiciones' %}">Terminos y condiciones</a></li>
             <img src="{% static 'img/MINITIC.png' %}" alt="20" width="110">
             <img src="{% static 'img/MINTRANSPORTE.png' %}" alt="20" width="110">
           </ul>
