@@ -21,3 +21,9 @@ STATIC_ROOT = BASE_DIR.child('staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
+
+EMAIL_HOST  = 'smtp.googlemail.com'
+EMAIL_PORT  = 587
+EMAIL_HOST_USER = 'firstsource.net2020@gmail.com'
+EMAIL_HOST_PASSWORD = '123.abcd*'
+EMAIL_USE_TLS = True
