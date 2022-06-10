@@ -20,7 +20,7 @@ class PqrCreateView(CreateView):
 class ContactoCreateView(CreateView):
     template_name = "publico/formulario/contacto.html"
     model = Contacto
-    fields = ['nombre', 'mail', 'ciudad', 'empresa', 'telefono', 'aceptar']
+    fields = ['nombre', 'mail', 'ciudad', 'empresa', 'telefono', 'aceptar', 'observacion']
     success_url = '.'   
 
 class ConsultarListView(ListView):
