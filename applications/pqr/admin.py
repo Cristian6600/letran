@@ -9,7 +9,7 @@ class PqrAdmin(admin.ModelAdmin):
 @admin.register(Contacto)
 class ContactoAdmin(admin.ModelAdmin):
     
-    list_display = ('nombre', 'mail')
+    list_display = ('nombre', 'mail', 'date')
 
 @admin.register(Respuesta)
 class RespuestaAdmin(admin.ModelAdmin):

@@ -70,6 +70,7 @@ class Contacto(models.Model):
     telefono = models.CharField(max_length=15)
     aceptar = models.BooleanField()
     observacion = models.TextField(max_length=150)
+    date = models.DateTimeField(auto_now_add = True)
 
     def __str__(self):
         return self.nombre
