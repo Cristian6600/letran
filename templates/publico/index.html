@@ -84,7 +84,7 @@
   
   
   
-  <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
+  <div class="grid-x grid-margin-x small-up-1 medium-up-4 large-up-4">
     <div class="cell small-4">
       <div class="image-hover-wrapper">
         <span class="image-hover-wrapper-banner">MENSAJERÍA</span>
@@ -105,7 +105,7 @@
         </a>
       </div>
     </div>
-    <div class="cell small-4">
+    <!-- <div class="cell small-4">
       <div class="image-hover-wrapper">
         <span class="image-hover-wrapper-banner">CARGA MASIVA</span>
         <a href="{% url 'home_app:servicios-adicionales' %}"><img src="{% static 'img/t7ty7.jpg' %}">
@@ -114,30 +114,37 @@
           </span>
         </a>
       </div>
+    </div> -->
+    
+
+    
+      <div class="cell small-4">
+        <div class="image-hover-wrapper">
+          <span class="image-hover-wrapper-banner">AEREO</span>
+          <a href="{% url 'home_app:servicios-adicionales' %}"><img src="{% static 'img/AEREO .png' %}">
+            <span class="image-hover-wrapper-reveal">
+              <p>Aeropuerto aeropuerto y punto a punto<br> Ver más<br><i class="fa fa-link" aria-hidden="true"></i></p>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="cell small-4">
+        <div class="image-hover-wrapper">
+          <span class="image-hover-wrapper-banner">ALMACENAMIENTO</span>
+          <a href="{% url 'home_app:servicios-adicionales' %}"><img src="{% static 'img/ALMACENAMIENTO .png' %}">
+            <span class="image-hover-wrapper-reveal">
+              <p>Inventarios - Alistamiento - Piking - Paking<br> Ver más<br><i class="fa fa-link" aria-hidden="true"></i></p>
+            </span>
+          </a>
+        </div>
+      </div>
+
     </div>
     
   </div>
   <br>
-  <div class="grid-x grid-margin-x  small-up-1 medium-up-2">
-  <div class="cell small-6">
-    <div class="image-hover-wrapper">
-      <span class="image-hover-wrapper-banner">AEREO</span>
-      <a href="{% url 'home_app:servicios-adicionales' %}"><img src="{% static 'img/AEREO .png' %}">
-        <span class="image-hover-wrapper-reveal">
-          <p>Aeropuerto aeropuerto y punto a punto<br> Ver más<br><i class="fa fa-link" aria-hidden="true"></i></p>
-        </span>
-      </a>
-    </div>
-  </div>
-  <div class="cell small-6">
-    <div class="image-hover-wrapper">
-      <span class="image-hover-wrapper-banner">ALMACENAMIENTO</span>
-      <a href="{% url 'home_app:servicios-adicionales' %}"><img src="{% static 'img/ALMACENAMIENTO .png' %}">
-        <span class="image-hover-wrapper-reveal">
-          <p>Inventarios - Alistamiento - Piking - Paking<br> Ver más<br><i class="fa fa-link" aria-hidden="true"></i></p>
-        </span>
-      </a>
-    </div>
+  
   </div>
 </div>
    
