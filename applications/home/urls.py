@@ -29,6 +29,11 @@ urlpatterns = [
         views.Servicios_adicionales.as_view(),
         name='servicios-adicionales',
     ),
+    path(
+        'servicios-almacenamiento/', 
+        views.Almacenamiento.as_view(),
+        name='servicios-almacenamiento',
+    ),
     #----------------------------------------
      path(
         'terminos-condiciones/', 

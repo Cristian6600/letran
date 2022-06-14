@@ -20,6 +20,9 @@ class Paqueteo(TemplateView):
 class Servicios_adicionales(TemplateView):
     template_name = "publico/servicios/serv_adi.html"
 
+class Almacenamiento(TemplateView):
+    template_name = "publico/servicios/almacenamiento.html"
+
 #-------------------------------------------------------    
 
 class Terminos_cond(TemplateView):
