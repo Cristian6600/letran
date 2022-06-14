@@ -4,70 +4,61 @@
 
 {% block publico-content %}
 
-<div class="grid-x grid-margin-x align-center">
-    <h3 class="cell" style="margin-bottom: 2em; text-align: center;">Contactanos </h3>  
-    <form class="cell medium-9 grid-x grid-margin-x" method="POST">{% csrf_token %}
-
-
-<div class="grid-x grid-margin-x">
-  <div class="cell small-6" id="example1" data-something="" data-mutate="v5xmob-sticky">
-    <div class="cell medium-6">
-      <label>Nombre:</label>
-      <div class="input-group">       
-        {{form.nombre}}
-      </div>
-  </div>
-  <div class="cell medium-6">
-      <label>Mail:</label>
-      <div class="input-group">       
-        {{form.mail}}
-      </div>
-  </div>
-  <div class="cell medium-6">
-      <label>Ciudad:</label>
-      <div class="input-group">       
-        {{form.ciudad}}
-      </div>
-  </div>
-  <div class="cell medium-6">
-    <label>Empresa:</label>
-    <div class="input-group">       
-      {{form.empresa}}
-    </div>
-</div>
-<div class="cell medium-6">
-    <label>Telefono:</label>
-    <div class="input-group">       
-      {{form.telefono}}
-    </div>
-</div>
-<div class="cell medium-6">
-    <label>He leido y acepto la politica de tratamiento de datos <a href="{% url 'home_app:politica-t-datos' %}" ><FONT COLOR="navy">Poltica de tratamiento de datos </FONT></a></label>
-    <div class="input-group">       
-      {{form.aceptar}}
-    </div>
-</div>
-<div class="cell medium-6">
-    <label>Déjanos tu mensaje</label>
-    <div class="input-group">       
-      {{form.observacion}}
-    </div>
-</div>
-<div class="cell medium-6">
-  <button type="submit" class="button" style="width: 200px;">Guardar</button>
-
-</div>
-</form>
-
-  </div>
-  
-  <div class="medium-6 cell small-order-1 medium-order-2 " >
-      <img  src="{% static 'img/contacto.jpg' %}">
+<div class="medium-6 cell small-order-1 medium-order-2 " >
+  <img  src="{% static 'img/con-truck.jpg' %}" width="1800" alt="500">
+  <div class="centrado">
+    <br><br><br>
+    <div class="translucent-form-overlay">
+      <form>
+        <h3>Contactanos</h3>
+        <div class="row columns">
+          <label>Nombre
+            <input type="text" name="keyword" placeholder="Any">
+          </label>
+        </div>
+        <div class="row columns">
+          <label>Mail
+            <select name="status" type="text">
+              <option>Any</option>
+              <option value="rent">Rent</option>
+              <option value="buy">Buy</option>
+            </select>
+          </label>
+        </div>
+        <div class="row columns">
+          <label>Ciudad
+            <select name="status" type="text">
+              <option>Any</option>
+              <option value="office">Office</option>
+              <option value="building">Building</option>
+            </select>
+          </label>
+        </div>
+        <div class="row columns">
+          <label>Telefono
+            <input type="text" name="location" placeholder="Any">
+          </label>
+        </div>
+        <div class="row">
+          <label class="columns small-12">Déjanos tu mensaje</label>
+          <div class="columns small-6">
+            <input type="number" min="0" name="min" placeholder="Min">
+          </div>
+          <div class="columns small-6">
+            <input type="number" min="0" name="max" placeholder="Max">
+          </div>
+        </div>
+        <button type="button" class="primary button expanded search-button">
+          Guardar
+        </button>
+     </form>
     </div>
   </div>
 </div>
 
-</div>
+
+
+
 
 
   
