@@ -1,4 +1,5 @@
 from .base import *
+from decouple import config
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -22,8 +23,10 @@ STATIC_ROOT = BASE_DIR.child('staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
 
-EMAIL_HOST  = 'smtp.googlemail.com'
-EMAIL_PORT  = 587
-EMAIL_HOST_USER = 'firstsource.net2020@gmail.com'
-EMAIL_HOST_PASSWORD = '123.abcd*'
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtpout.secureserver.net"
 EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "servicliente@firstsource.net.co"
+EMAIL_HOST_PASSWORD = "YYRb3pcgcn"

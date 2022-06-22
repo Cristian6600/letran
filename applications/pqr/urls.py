@@ -11,7 +11,7 @@ urlpatterns = [
     
     path(
         'contacto-letran/',
-         views.ContactoCreateView.as_view(),
+         views.Send.as_view(),
          name='contacto-letran',
     ),
 
@@ -32,5 +32,6 @@ urlpatterns = [
         views.RespuestaPdf.as_view(),
         name = 'respuesta-pdf',
     ),
+    # path('send/', views.Send.as_view(), name='send'),
 
     ]

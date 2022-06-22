@@ -1,0 +1,75 @@
+{% extends "publico/base_publico.html" %} 
+
+{% load static %}
+
+{% block publico-content %}
+
+                        <form
+                            action="" class="form-inline subscribe-form auth-form needs-validation" method="post"
+                            id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+                            {% csrf_token %}
+                            <div class="row columns">
+                                <label>Nombre:</label>
+                                <div class="input-group">       
+                                  {{form.nombre}}
+                                </div>
+                            </div>
+                            <div class="row columns">
+                                <label>Mail:</label>
+                                <div class="input-group">       
+                                  {{form.mail}}
+                                </div>
+                            </div>
+                            <div class="row columns">
+                                <label>Ciudad:</label>
+                                <div class="input-group">       
+                                  {{form.ciudad}}
+                                </div>
+                            </div>
+                            <div class="row columns">
+                              <label>Empresa:</label>
+                              <div class="input-group">       
+                                {{form.empresa}}
+                              </div>
+                          </div>
+                          <div class="row columns">
+                              <label>Telefono:</label>
+                              <div class="input-group">       
+                                {{form.telefono}}
+                              </div>
+                          </div>
+                          <div class="row columns">
+                              <label>He leido y acepto la politica de tratamiento de datos <a href="{% url 'home_app:politica-t-datos' %}" ><FONT COLOR="navy">Poltica de tratamiento de datos </FONT></a></label>
+                              <div class="input-group">       
+                                {{form.aceptar}}
+                              </div>
+                          </div>
+                          <div class="row columns">
+                              <label>Déjanos tu mensaje</label>
+                              <div class="input-group">       
+                                {{form.observacion}}
+                              </div>
+                          </div>
+                            <!-- <div class="form-group mx-sm-3">
+                                <input type="text" class="form-control" name="email" id="mce-EMAIL"
+                                    placeholder="Enter your email" required="required">
+                                    
+                            </div> -->
+                            
+                            <p><button class="button" data-toggle="animatedModal10">Enviar</button></p>
+                            <div class="reveal" id="animatedModal10" data-reveal data-close-on-click="true" data-animation-in="spin-in" data-animation-out="spin-out">
+                                <h1>Hola</h1>
+                                <p class="lead">Tu mensaje ha sido enviado satisfactoriamente. Nos comunicaremos contigo en el menor tiempo posible.</p>
+                                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+{% endblock publico-content %}
