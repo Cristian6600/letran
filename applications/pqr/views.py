@@ -4,7 +4,7 @@ from django import http
 from django.template import loader
 from re import template
 from django.shortcuts import render
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, View
 from django.views import generic
 from . models import Pqr, Contacto, Respuesta
 from .forms import PqrForm, ContactForm
@@ -64,12 +64,8 @@ class RespuestaPdf(DetailView):
         pdf = render_to_pdf('publico/formulario/pdf_respuestas.html', data)
         return HttpResponse(pdf, content_type='application/pdf')
 
-    
-
 from django.conf import settings
 from django.shortcuts import render
-
-from django.views import View
 
 from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
@@ -111,7 +107,7 @@ class Send(View):
 
         # Se crea el correo (titulo, mensaje, emisor, destinatario)
         msg = EmailMultiAlternatives(
-            'Esto es un prueba',
+            'Esto es una prueba',
             'Se puede eliminar',
             settings.EMAIL_HOST_USER,
             [mail]

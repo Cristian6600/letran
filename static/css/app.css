@@ -65,7 +65,25 @@
   position: absolute;
   top: 43%;
   left: 80%;
+  width: 40%;
+  transform: translate(-50%, -50%);
+  font-family: 'Arial Nova Light', sans-serif  ;
+  color: #fefefe;
+}
+.centrado-contacto{
+  position: absolute;
+  top: 65%;
+  left: 30%;
   width: 45%;
+  transform: translate(-50%, -50%);
+  font-family: 'Arial Nova Light', sans-serif  ;
+  color: #fefefe;
+}
+.centrado-contacto2{
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  width: 35%;
   transform: translate(-50%, -50%);
   font-family: 'Arial Nova Light', sans-serif  ;
   color: #fefefe;

@@ -18,3 +18,13 @@ class ContactForm(forms.ModelForm):
         fields = (
             '__all__'    
         )
+
+        widgets = {
+            'observacion': forms.TextInput(
+                attrs = {
+                    'placeholder': 'Observacion', 
+                    'class': 'input-group-field',
+                    
+                }
+            ),
+         }
