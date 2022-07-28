@@ -49,6 +49,9 @@ class Politica_SGC(TemplateView):
 class Cumplimiento(TemplateView):
     template_name = "publico/requerimientos/cumplimiento.html"
 
+class CotizarTemplateView(TemplateView):
+    template_name = "publico/formulario/cotizar.html"
+
 #---------------Noticias------------------------------
 # class NoticiaDetailView(DetailView):
 #     model: Noticia

@@ -75,5 +75,11 @@ urlpatterns = [
         views.Cumplimiento.as_view(),
         name='cumplimiento',
     ),
+
+    path(
+        'cotizar/', 
+        views.CotizarTemplateView.as_view(),
+        name='cotizar-envio-letran',
+    ),
     
 ]
